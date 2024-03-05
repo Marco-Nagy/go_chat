@@ -1,6 +1,6 @@
 
 
-class Routes {
+class AppRouter {
 
   // * Auth Const
   static const String welcomePage = "/";
