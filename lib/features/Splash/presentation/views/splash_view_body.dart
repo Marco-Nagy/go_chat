@@ -43,7 +43,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
         Lottie.asset(
           ImgAssets.APP_SPLASH,
           controller: lottieController,
-          height: MediaQuery.of(context).size.height * .5,
+          height: MediaQuery.of(context).size.height * .4,
           animate: true,
           onLoaded: (composition) {
             lottieController.duration = composition.duration;
@@ -63,7 +63,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
           Center(
             child: DefaultTextStyle(
               style: const TextStyle(
-                fontSize: 14.0,
+                fontSize: 20.0,
                 fontFamily: akaya,
               ),
               child: AnimatedTextKit(
@@ -98,9 +98,13 @@ class _SplashViewBodyState extends State<SplashViewBody>
     logoController = AnimationController(
       duration: const Duration(seconds: 2),
       vsync: this,
-    );
-    slideAnimation = Tween(begin: const Offset(0, 100), end: Offset.zero)
-        .animate(logoController);
+    )..repeat(reverse: true,period:const Duration(seconds: 1) );
+    slideAnimation = Tween(  begin: const Offset(-1.5, 0.0),
+      end: Offset.zero,
+    ).animate(CurvedAnimation(
+      parent: logoController,
+      curve: Curves.linearToEaseOut,
+    ));
     lottieController.addListener(() {
       setState(() {
         if (lottieController.isAnimating) {
