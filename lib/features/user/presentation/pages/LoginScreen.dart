@@ -8,6 +8,8 @@ import 'package:go_chat/core/utils/constant.dart';
 import 'otp_screen.dart';
 
 class LoginScreen extends StatefulWidget {
+  const LoginScreen({super.key});
+
   @override
   _LoginScreenState createState() => _LoginScreenState();
 }
