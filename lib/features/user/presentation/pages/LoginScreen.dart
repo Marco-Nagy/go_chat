@@ -14,7 +14,6 @@ class LoginScreen extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginScreen> {
   var divWidth;
-  GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   final TextEditingController _phoneController = TextEditingController();
   static Country _selectedFilteredDialogCountry =
       CountryPickerUtils.getCountryByPhoneCode('20');
@@ -56,7 +55,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
                 const Text(
-                  "WhatsApp Clone will send you SMS message \n(carrier charges may apply) to verify your phone number. Enter the country code and phone number.",
+                  "Go Chat will send you SMS message \n(carrier charges may apply) to verify your phone number. Enter the country code and phone number.",
                   textAlign: TextAlign.center,
                   style: TextStyle(fontSize: 15, color: Colors.white),
                 ),
