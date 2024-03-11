@@ -56,6 +56,8 @@ class _SplashViewBodyState extends State<SplashViewBody>
             position: slideAnimation,
             child: Image.asset(
               ImgAssets.APP_LOGO,
+              width: MediaQuery.sizeOf(context).width * .2,
+              height: MediaQuery.sizeOf(context).height * .3,
             ),
           ),
         ),

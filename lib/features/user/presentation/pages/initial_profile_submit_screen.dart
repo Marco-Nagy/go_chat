@@ -4,6 +4,7 @@ import 'package:go_chat/core/theme/styes.dart';
 import 'package:go_chat/core/utils/constant.dart';
 import 'package:go_chat/core/utils/message_type_const.dart';
 import 'package:go_chat/core/widgets/toast.dart';
+import 'package:go_chat/features/Home/presentation/pages/home_screen.dart';
 import 'package:go_chat/features/user/presentation/widgets/profile_widget.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -19,6 +20,7 @@ class InitialProfileSubmitScreen extends StatefulWidget {
 class _InitialProfileSubmitScreenState extends State<InitialProfileSubmitScreen>
     with SingleTickerProviderStateMixin {
    File _image = File('');
+    TextEditingController _userNameController = TextEditingController();
 
   @override
   void initState() {
@@ -27,6 +29,7 @@ class _InitialProfileSubmitScreenState extends State<InitialProfileSubmitScreen>
 
   @override
   void dispose() {
+    _userNameController.dispose();
     super.dispose();
   }
 
@@ -73,31 +76,49 @@ class _InitialProfileSubmitScreenState extends State<InitialProfileSubmitScreen>
                   const SizedBox(
                     height: 30,
                   ),
-                ],
-              ),
-            ),
-            GestureDetector(
-              onTap: () {
-                // Navigator.push(context,
-                //     MaterialPageRoute(builder: (context) => const OtpScreen()));
-              },
-              child: Container(
-                margin: const EdgeInsets.only(bottom: 20),
-                width: 120,
-                height: 40,
-                decoration: BoxDecoration(
-                  color: tabColor,
-                  borderRadius: BorderRadius.circular(5),
-                ),
-                child: const Center(
-                  child: Text(
-                    "Next",
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 15,
-                        fontWeight: FontWeight.w500),
+                  Container(
+                      height: 42,
+                      width: MediaQuery.sizeOf(context).width*.8,
+                      alignment: Alignment.center,
+                      decoration: const BoxDecoration(
+                          border: Border(
+                              bottom: BorderSide(color: tabColor, width: 1.5))),
+                      child: TextField(
+                        controller: _userNameController,
+                        decoration: const InputDecoration(
+                            hintText: 'User Name',
+                            border: InputBorder.none,
+                            hintStyle:
+                            TextStyle(color: Colors.white, fontSize: 14)),
+                      )),
+                  const SizedBox(
+                    height: 30,
                   ),
-                ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => const HomeScreen()));
+                    },
+                    child: Container(
+                      margin: const EdgeInsets.only(bottom: 20),
+                      width: 120,
+                      height: 40,
+                      decoration: BoxDecoration(
+                        color: tabColor,
+                        borderRadius: BorderRadius.circular(5),
+                      ),
+                      child: const Center(
+                        child: Text(
+                          "Next",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 15,
+                              fontWeight: FontWeight.w500),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
           ],

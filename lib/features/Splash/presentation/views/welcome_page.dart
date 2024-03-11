@@ -25,7 +25,7 @@ class WelcomePage extends StatelessWidget {
                     color: tabColor),
               ),
             ),
-            Image.asset(ImgAssets.APP_LOGO),
+            Image.asset(ImgAssets.APP_LOGO,scale: .25,width: MediaQuery.sizeOf(context).width*.6,),
             Column(
               children: [
                 const Text(
