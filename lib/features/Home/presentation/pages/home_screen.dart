@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:go_chat/core/theme/styes.dart';
+import 'package:go_chat/core/utils/message_type_const.dart';
+import 'package:go_chat/core/widgets/toast.dart';
 import 'package:go_chat/features/Call/presentation/pages/calls_screen.dart';
 import 'package:go_chat/features/Chat/presentation/pages/chats_screen.dart';
 import 'package:go_chat/features/Status/presentation/pages/status_screen.dart';
@@ -123,7 +125,13 @@ class _HomeScreenState extends State<HomeScreen>
       case 0:
         return FloatingActionButton(
           backgroundColor: tabColor,
-          onPressed: () {},
+          onPressed: () {
+            aweSnackBar(
+                msg: 'Error ',
+                context: context,
+                title: 'Calls',
+                type: MessageTypeConst.failure);
+          },
           child: const Icon(
             Icons.message,
             color: Colors.white,
@@ -132,7 +140,13 @@ class _HomeScreenState extends State<HomeScreen>
       case 1:
         return FloatingActionButton(
           backgroundColor: tabColor,
-          onPressed: () {},
+          onPressed: () {
+            aweSnackBar(
+                msg: 'Status ',
+                context: context,
+                title: 'Status',
+                type: MessageTypeConst.success);
+          },
           child: const Icon(
             Icons.camera_alt,
             color: Colors.white,
@@ -141,7 +155,13 @@ class _HomeScreenState extends State<HomeScreen>
       case 2:
         return FloatingActionButton(
           backgroundColor: tabColor,
-          onPressed: () {},
+          onPressed: () {
+            aweSnackBar(
+                msg: 'warning ',
+                context: context,
+                title: 'Status',
+                type: MessageTypeConst.warning);
+          },
           child: const Icon(
             Icons.add_call,
             color: Colors.white,
