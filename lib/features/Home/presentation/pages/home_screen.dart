@@ -5,6 +5,7 @@ import 'package:go_chat/core/utils/message_type_const.dart';
 import 'package:go_chat/core/widgets/toast.dart';
 import 'package:go_chat/features/Call/presentation/pages/calls_screen.dart';
 import 'package:go_chat/features/Chat/presentation/pages/chats_screen.dart';
+import 'package:go_chat/features/Home/presentation/pages/contacts_screen.dart';
 import 'package:go_chat/features/Status/presentation/pages/status_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -126,11 +127,7 @@ class _HomeScreenState extends State<HomeScreen>
         return FloatingActionButton(
           backgroundColor: tabColor,
           onPressed: () {
-            aweSnackBar(
-                msg: 'Error ',
-                context: context,
-                title: 'Calls',
-                type: MessageTypeConst.failure);
+          Navigator.push(context, MaterialPageRoute(builder: (context) => ContactsScreen(),));
           },
           child: const Icon(
             Icons.message,
