@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:go_chat/core/theme/styes.dart';
 import 'package:go_chat/core/utils/message_type_const.dart';
-import 'package:go_chat/core/widgets/toast.dart';
+import 'package:go_chat/core/widgets/snack_bar.dart';
 import 'package:go_chat/features/Call/presentation/pages/calls_screen.dart';
 import 'package:go_chat/features/Chat/presentation/pages/chats_screen.dart';
 import 'package:go_chat/features/Home/presentation/pages/contacts_screen.dart';

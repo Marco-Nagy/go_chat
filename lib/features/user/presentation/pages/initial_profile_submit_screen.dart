@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:go_chat/core/theme/styes.dart';
 import 'package:go_chat/core/utils/constant.dart';
 import 'package:go_chat/core/utils/message_type_const.dart';
-import 'package:go_chat/core/widgets/toast.dart';
+import 'package:go_chat/core/widgets/snack_bar.dart';
 import 'package:go_chat/features/Home/presentation/pages/home_screen.dart';
 import 'package:go_chat/features/user/presentation/widgets/profile_widget.dart';
 import 'package:image_picker/image_picker.dart';
