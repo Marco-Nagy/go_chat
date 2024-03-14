@@ -46,11 +46,11 @@ class _OtpScreenState extends State<OtpScreen> {
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 15, color: Colors.white),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 30,
                   ),
                   _pinCodeWidget(),
-                  SizedBox(
+                  const SizedBox(
                     height: 30,
                   ),
                 ],
