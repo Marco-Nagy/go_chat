@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:go_chat/features/Splash/presentation/views/splash_view.dart';
 
+import 'core/routes/on_generate_route.dart';
 import 'core/theme/styes.dart';
 import 'firebase_options.dart';
 
@@ -32,7 +33,9 @@ class MyApp extends StatelessWidget {
           color: appBarColor,
         ),
       ),
-      home: const SplashView(),
+      initialRoute: '/',
+      onGenerateRoute: OnGenerateRoute.route,
+      routes: {"/":(context)=>const SplashView()},
     );
   }
 }
