@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_chat/core/routes/app_route.dart';
 import 'package:go_chat/features/Call/presentation/pages/call_contacts_screen.dart';
-import 'package:go_chat/features/Chat/presentation/Screens/scingle_chat_screen.dart';
+import 'package:go_chat/features/Chat/presentation/screens/single_chat_screen.dart';
 import 'package:go_chat/features/Home/presentation/screens/contacts_screen.dart';
 import 'package:go_chat/features/Home/presentation/screens/home_screen.dart';
 import 'package:go_chat/features/Settings/settings_screen.dart';
@@ -23,7 +23,7 @@ class OnGenerateRoute {
         case AppRouter.callContactsScreen:
         return materialScreenBuilder(const CallContactsScreen()); 
         case AppRouter.singleChatScreen:
-        return materialScreenBuilder(const ScingleChatScreen());
+        return materialScreenBuilder(const SingleChatScreen());
     }
   }
 
