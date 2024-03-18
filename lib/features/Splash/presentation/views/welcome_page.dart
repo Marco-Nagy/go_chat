@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_chat/core/theme/styes.dart';
 import 'package:go_chat/core/utils/constant.dart';
 import 'package:go_chat/core/utils/img_assets.dart';
-import 'package:go_chat/features/user/presentation/pages/LoginScreen.dart';
+import 'package:go_chat/features/user/presentation/screens/LoginScreen.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({Key? key}) : super(key: key);
