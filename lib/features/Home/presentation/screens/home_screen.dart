@@ -1,12 +1,12 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:go_chat/core/helpers/extentions.dart';
+import 'package:go_chat/core/routes/app_route.dart';
 import 'package:go_chat/core/theme/styes.dart';
 import 'package:go_chat/core/utils/message_type_const.dart';
 import 'package:go_chat/core/widgets/snack_bar.dart';
 import 'package:go_chat/features/Call/presentation/pages/calls_screen.dart';
-import 'package:go_chat/features/Chat/presentation/pages/chats_screen.dart';
-import 'package:go_chat/features/Home/presentation/pages/contacts_screen.dart';
-import 'package:go_chat/features/Status/presentation/pages/status_screen.dart';
+import 'package:go_chat/features/Chat/presentation/screens/chats_screen.dart';
+import 'package:go_chat/features/Status/presentation/screens/status_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -74,7 +74,10 @@ class _HomeScreenState extends State<HomeScreen>
                   PopupMenuItem<String>(
                     value: "Settings",
                     child: GestureDetector(
-                        onTap: () {}, child: const Text('Settings')),
+                        onTap: () {
+                          context.pushNamed(AppRouter.settingsScreen);
+                        },
+                        child: const Text('Settings')),
                   ),
                 ],
               ),
@@ -127,7 +130,8 @@ class _HomeScreenState extends State<HomeScreen>
         return FloatingActionButton(
           backgroundColor: tabColor,
           onPressed: () {
-          Navigator.push(context, MaterialPageRoute(builder: (context) => ContactsScreen(),));
+            context.pushNamed(AppRouter.contactUsersScreen);
+            // Navigator.push(context, MaterialPageRoute(builder: (context) => ContactsScreen(),));
           },
           child: const Icon(
             Icons.message,
@@ -138,11 +142,7 @@ class _HomeScreenState extends State<HomeScreen>
         return FloatingActionButton(
           backgroundColor: tabColor,
           onPressed: () {
-            aweSnackBar(
-                msg: 'Status ',
-                context: context,
-                title: 'Status',
-                type: MessageTypeConst.success);
+          context.pushNamed(AppRouter.callContactsScreen);
           },
           child: const Icon(
             Icons.camera_alt,
