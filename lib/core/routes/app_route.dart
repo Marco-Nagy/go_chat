@@ -3,32 +3,32 @@
 class AppRouter {
 
   // * Auth Const
-  static const String welcomePage = "/";
-  static const String otpPage = "otpPage";
-  static const String loginPage = "loginPage";
-  static const String initialProfileSubmitPage = "initialProfileSubmitPage";
+  static const String welcomeScreen = "/";
+  static const String otpScreen = "otpScreen";
+  static const String loginScreen = "loginScreen";
+  static const String initialProfileSubmitScreen = "initialProfileSubmitScreen";
 
   // * Home
-  static const String homePage = "homePage";
+  static const String homeScreen = "homeScreen";
 
-  // * Contact Users Page
-  static const String contactUsersPage = "contactUsersPage";
-  static const String callContactsPage = "callContactsPage";
+  // * Contact Users Screen
+  static const String contactUsersScreen = "contactUsersScreen";
+  static const String callContactsScreen = "callContactsScreen";
 
   // * Settings
-  static const String settingsPage = "settingsPage";
+  static const String settingsScreen = "settingsScreen";
 
-  // * Chat Pages
-  static const String singleChatPage = "singleChatPage";
+  // * Chat screens
+  static const String singleChatScreen = "singleChatScreen";
 
-  // * My Status Page
-  static const String myStatusPage = "myStatusPage";
+  // * My Status Screen
+  static const String myStatusScreen = "myStatusScreen";
 
-  // * Call Page
-  static const String callPage = "callPage";
+  // * Call Screen
+  static const String callScreen = "callScreen";
 
-  // * Edit Profile Page
-  static const String editProfilePage = "editProfilePage";
+  // * Edit Profile Screen
+  static const String editProfileScreen = "editProfileScreen";
 
 
 

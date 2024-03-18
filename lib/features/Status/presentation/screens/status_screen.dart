@@ -1,4 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:go_chat/core/helpers/extentions.dart';
+import 'package:go_chat/core/routes/app_route.dart';
 import 'package:go_chat/core/theme/styes.dart';
 import 'package:go_chat/core/utils/date_formats.dart';
 import 'package:go_chat/features/user/presentation/widgets/profile_widget.dart';
@@ -44,23 +47,37 @@ class StatusScreen extends StatelessWidget {
                     )
                   ],
                 ),
-                const Expanded(
+                Expanded(
                     child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
+                    const Text(
                       'My status',
                       style: TextStyle(fontSize: 16),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 2,
                     ),
-                    Text(
+                    const Text(
                       'Tapto add You Status Update',
                       style: TextStyle(color: greyColor),
                     ),
+                    const SizedBox(
+                      width: 10,
+                    ),
                   ],
-                ))
+                ),),
+
+
+                GestureDetector(
+                    onTap: () {
+                      context.pushNamed(AppRouter.myStatusScreen);
+                    },
+                    child: const Icon(Icons.more_horiz)),
+                const SizedBox(
+                  width: 10,
+                ),
+
               ],
             ),
             const Padding(
