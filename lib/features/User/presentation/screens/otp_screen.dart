@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_pin_code_fields/flutter_pin_code_fields.dart';
 import 'package:go_chat/core/theme/styes.dart';
 import 'package:go_chat/core/utils/constant.dart';
-import 'package:go_chat/features/user/presentation/pages/initial_profile_submit_screen.dart';
+import 'initial_profile_submit_screen.dart';
 
 class OtpScreen extends StatefulWidget {
   const OtpScreen({Key? key}) : super(key: key);
