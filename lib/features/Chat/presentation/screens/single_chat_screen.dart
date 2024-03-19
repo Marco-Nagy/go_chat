@@ -55,7 +55,7 @@ class _SingleChatScreenState extends State<SingleChatScreen> {
         children: [
           Positioned(
               left: 0,
-              height: 0,
+              top: 0,
               right: 0,
               bottom: 0,
               child: Image.asset(
@@ -76,7 +76,34 @@ class _SingleChatScreenState extends State<SingleChatScreen> {
                     messageBgColor: tabColor,
                     onLongPress: (){},
                     onSwipe: (){},
-                  )
+                  ),_messageWidget(
+                    message: 'Wow Are you?',
+                    alignment: Alignment.centerRight,
+                    createAt: Timestamp.now(),
+                    isShowTick: true,
+                    isSeen: false,
+                    messageBgColor: tabColor,
+                    onLongPress: (){},
+                    onSwipe: (){},
+                  ),_messageWidget(
+                    message: 'Hi',
+                    alignment: Alignment.centerLeft,
+                    createAt: Timestamp.now(),
+                    isShowTick: true,
+                    isSeen: false,
+                    messageBgColor: senderMessageColor,
+                    onLongPress: (){},
+                    onSwipe: (){},
+                  ),_messageWidget(
+                    message: "I'm Fine :)",
+                    alignment: Alignment.centerLeft,
+                    createAt: Timestamp.now(),
+                    isShowTick: true,
+                    isSeen: false,
+                    messageBgColor: senderMessageColor,
+                    onLongPress: (){},
+                    onSwipe: (){},
+                  ),
                 ],
               ))
             ],
@@ -103,49 +130,52 @@ class _SingleChatScreenState extends State<SingleChatScreen> {
           onRightSwipe: (details) => onSwipe,
           child: InkWell(
             onLongPress: onLongPress,
-            child: Stack(children: [
-              Column(
-                children: [
-                  Container(
-                    alignment: alignment,
-                    constraints: BoxConstraints(maxWidth: context.width * .8),
-                    margin: EdgeInsets.only(top: 10),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(8),
-                      color: messageBgColor,
-                    ),
-                    child: Text(
-                      '$message',
-                      style: TextStyle(
-                          color: Colors.white, fontWeight: FontWeight.bold),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 3,
-                  ),
-                ],
-              ),
-              Positioned(
-                bottom: 4,
-                right: 10,
-                child: Row(
+            child: Container(
+              alignment: alignment,
+              child: Stack(children: [
+                Column(
                   children: [
-                    Text(DateFormat.jm().format(createAt!.toDate()),
-                        style: const TextStyle(fontSize: 12, color: greyColor)),
-                    const SizedBox(
-                      width: 5,
+                    Container(
+                      constraints: BoxConstraints(maxWidth: context.width * 0.80),
+                      margin: const EdgeInsets.only(top: 10),
+                      padding: const EdgeInsets.only(left: 5, right: 85,top: 5,bottom: 5),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(8),
+                        color: messageBgColor,
+                      ),
+                      child: Text(
+                        '$message',
+                        style: TextStyle(
+                            color: Colors.white, fontWeight: FontWeight.bold),
+                      ),
                     ),
-                    isShowTick == true
-                        ? Icon(
-                            isSeen == true ? Icons.done_all : Icons.done,
-                            size: 16,
-                            color: isSeen == true ? Colors.blue : greyColor,
-                          )
-                        : Container()
+                    SizedBox(
+                      height: 3,
+                    ),
                   ],
                 ),
-              ),
-            ]),
+                Positioned(
+                  bottom: 4,
+                  right: 10,
+                  child: Row(
+                    children: [
+                      Text(DateFormat.jm().format(createAt!.toDate()),
+                          style: const TextStyle(fontSize: 12, color: lightGreyColor)),
+                      const SizedBox(
+                        width: 5,
+                      ),
+                      isShowTick == true
+                          ? Icon(
+                              isSeen == true ? Icons.done_all : Icons.done,
+                              size: 16,
+                              color: isSeen == true ? Colors.blue : greyColor,
+                            )
+                          : Container()
+                    ],
+                  ),
+                ),
+              ]),
+            ),
           )),
     );
   }
