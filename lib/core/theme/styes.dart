@@ -20,6 +20,7 @@ const redColor = Colors.red;
 final Color successBgColor = Color.fromRGBO(202, 237, 220, 1);
 final Color successTextColor = Color.fromRGBO(64, 227, 52, 1.0);
 
+
 final Color errorBgColor = Color.fromRGBO(254, 242, 242, 1);
 final Color errorTextColor = Color.fromRGBO(156, 34, 34, 1);
 
