@@ -16,3 +16,15 @@ const lightGreyColor = Colors.white70;
 const greyColor = Colors.grey;
 const blackColor = Colors.black;
 const whiteColor = Colors.white;
+const redColor = Colors.red;
+final Color successBgColor = Color.fromRGBO(202, 237, 220, 1);
+final Color successTextColor = Color.fromRGBO(64, 227, 52, 1.0);
+
+final Color errorBgColor = Color.fromRGBO(254, 242, 242, 1);
+final Color errorTextColor = Color.fromRGBO(156, 34, 34, 1);
+
+final Color infoBgColor = Color.fromRGBO(239, 246, 255, 1);
+final Color infoTextColor = Color.fromRGBO(88, 145, 255, 1);
+
+final Color warnBgColor = Color.fromRGBO(255, 251, 235, 1);
+final Color warnTextColor = Color.fromRGBO(180, 83, 9, 1);
